@@ -19,7 +19,7 @@ $('form').change(function(evt) {
 
 2) Leaving the Form
 
-This event is triggered anytime the user loses the form's focus.  Perhaps focus() would have been a better name, but I didn't want to collide with existing implementations.  This checks to see if the user has moved focus, and if so, if the focus is outside of the form.   If both conditions are true, the leave() event stack is fired.  Attach it like so:
+This event is triggered anytime the user loses the form's focus.  Perhaps blur() would have been a better name, but I didn't want to collide with existing implementations.  This checks to see if the user has moved focus, and if so, if the focus is outside of the form.   If both conditions are true, the leave() event stack is fired.  Attach it like so:
 
 ```javascript
 $('form').leave(function(evt) {
