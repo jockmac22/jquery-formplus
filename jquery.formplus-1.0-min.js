@@ -1,0 +1,3 @@
+// Wireup a jQuery short cut-to define or fire the 'leave' trigger on 
+// a given form or set of forms.
+$.fn.leave=function(e){var t=$(this).filter("form");e!==null?t.bind("leave",e):t.trigger("leave")};$.fn.change=function(e){var t=$(this).filter("form");e!==null?t.bind("change",e):t.trigger("change")};$(document).ready(function(){$("form").focusout(function(e){var t=$(e.relatedTarget),n=$(this).find("*").filter(t).size()===0;n&&$(this).trigger("leave")});$("form").find(":input").change(function(){$(this).closest("form").trigger("change")})});
